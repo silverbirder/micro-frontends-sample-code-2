@@ -1,0 +1,5 @@
+{
+  "Example": {
+    "server": "http://localhost:3001/batch"
+  }
+}
