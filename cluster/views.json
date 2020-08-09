@@ -1,5 +1,5 @@
 {
   "Example": {
-    "server": "http://localhost:3001/batch"
+    "server": "http://localhost:3000/batch"
   }
 }
