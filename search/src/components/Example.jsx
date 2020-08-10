@@ -7,6 +7,7 @@ const Example = ({ title }) => <div>
 </div>;
 
 Example.propTypes = {
+  title: PropTypes.object.isRequired
 };
 
 export default Example;
