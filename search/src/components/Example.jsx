@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Example = ({ title }) => <h1>{ title }</h1>;
+const Example = ({ title }) => <div>
+  <h1>{ title.name }</h1>
+  <input type="text"/>
+</div>;
 
 Example.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 export default Example;
