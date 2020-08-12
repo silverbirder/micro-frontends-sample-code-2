@@ -1,0 +1,29 @@
+{
+  "name": "micro-frontends-sample-code-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cluster": "cd cluster && PORT=5000 ara run:cluster --config ./views.json",
+    "layout": "cd layout && PORT=8080 node ./bin/www",
+    "proxy": "cd proxy && HYPERNOVA_BATCH=http://localhost:5000/batch PORT=8000 ara run:proxy --config ./nova-proxy.json",
+    "search:dev": "cd search && PORT=3000 ./node_modules/webpack/bin/webpack.js --watch --mode development",
+    "search:prod": "cd search && PORT=3000 ./node_modules/webpack/bin/webpack.js --mode production && node dist/server.js",
+    "dev": "concurrently -n cluster,layout,proxy,search \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:dev\"",
+    "start": "concurrently -n cluster,layout,proxy,search \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:prod\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silver-birder/micro-frontends-sample-code-2.git"
+  },
+  "keywords": [],
+  "author": "silverbirder <silverbirder@gmail.com> (https://silver-birder.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silver-birder/micro-frontends-sample-code-2/issues"
+  },
+  "homepage": "https://github.com/Silver-birder/micro-frontends-sample-code-2#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
