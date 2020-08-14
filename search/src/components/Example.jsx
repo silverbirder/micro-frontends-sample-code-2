@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import ProductItem from '@bit/silver-birder.sample.product-item';
 
 const Example = ({title}) => <div>
   <div className="form-group">

@@ -9,6 +9,7 @@
     "lint": "eslint ./ --ignore-pattern dist/"
   },
   "dependencies": {
+    "@bit/silver-birder.sample.product-item": "0.0.3",
     "express": "^4.17.1",
     "hypernova": "^2.5.0",
     "nova-react": "^1.0.2",
