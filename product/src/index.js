@@ -8,7 +8,7 @@ import Item from './components/Item.vue'
 hypernova({
   devMode: process.env.NODE_ENV !== 'production',
   getComponent (name) {
-    if (name === 'Example') {
+    if (name === 'Item') {
       return renderVue(name, Vue.extend(Item))
     }
   },
