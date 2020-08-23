@@ -3,13 +3,13 @@ import { renderVue, Vue } from 'hypernova-vue/server'
 import express from 'express'
 import path from 'path'
 
-import Item from './components/Item.vue'
+import Product from './components/Product.vue'
 
 hypernova({
   devMode: process.env.NODE_ENV !== 'production',
   getComponent (name) {
-    if (name === 'Item') {
-      return renderVue(name, Vue.extend(Item))
+    if (name === 'Product') {
+      return renderVue(name, Vue.extend(Product))
     }
   },
   port: process.env.PORT || 3000,

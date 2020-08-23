@@ -1,8 +1,8 @@
 {
-  "Example": {
+  "Search": {
     "server": "http://localhost:3000/batch"
   },
-  "Item": {
+  "Product": {
     "server": "http://localhost:3001/batch"
   }
 }

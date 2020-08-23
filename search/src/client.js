@@ -1,10 +1,10 @@
 import { mountComponent, loadById, load } from 'nova-react';
 
-import Example from './components/Example';
+import Search from './components/Search';
 
 const render = (name, { node, data }) => {
-  if (name === 'Example') {
-    return mountComponent(Example, node, data)
+  if (name === 'Search') {
+    return mountComponent(Search, node, data)
   }
 }
 
@@ -18,4 +18,4 @@ document.addEventListener('NovaMount', ({ detail }) => {
   }
 })
 
-load('Example').forEach(render.bind(null, 'Example'))
+load('Search').forEach(render.bind(null, 'Search'))

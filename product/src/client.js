@@ -1,9 +1,9 @@
 import { load, Vue, mountComponent, loadById } from 'hypernova-vue'
-import Item from './components/Item.vue'
+import Product from './components/Product.vue'
 
 const render = (name, { node, data }) => {
-  if (name === 'Item') {
-    return mountComponent(Vue.extend(Item), node, data)
+  if (name === 'Product') {
+    return mountComponent(Vue.extend(Product), node, data)
   }
 }
 
@@ -17,4 +17,4 @@ document.addEventListener('NovaMount', ({ detail }) => {
   }
 })
 
-load('Item').forEach(render.bind(null, 'Item'))
+load('Product').forEach(render.bind(null, 'Product'))
