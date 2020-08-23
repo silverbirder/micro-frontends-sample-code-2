@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Nova } from 'nova-react-bridge'
 
 class Example extends Component {
   constructor(props){
@@ -35,6 +36,10 @@ class Example extends Component {
                   </button>
                 </div>
               </div>
+              <Nova
+                name="Item"
+                data={{ title: emoji }}
+              />
             </div>
           })}
         </div>

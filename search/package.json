@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "hypernova": "^2.5.0",
     "nova-react": "^1.0.2",
+    "nova-react-bridge": "^0.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"

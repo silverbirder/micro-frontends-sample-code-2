@@ -9,8 +9,10 @@
     "proxy": "cd proxy && HYPERNOVA_BATCH=http://localhost:5000/batch PORT=8000 ara run:proxy --config ./nova-proxy.json",
     "search:dev": "cd search && PORT=3000 ./node_modules/webpack/bin/webpack.js --watch --mode development",
     "search:prod": "cd search && PORT=3000 ./node_modules/webpack/bin/webpack.js --mode production && node dist/server.js",
-    "dev": "concurrently -n cluster,layout,proxy,search \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:dev\"",
-    "start": "concurrently -n cluster,layout,proxy,search \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:prod\""
+    "product:dev": "cd product && PORT=3001 ./node_modules/webpack/bin/webpack.js --watch --mode development",
+    "product:prod": "cd product && PORT=3001 ./node_modules/webpack/bin/webpack.js --mode production && node dist/server.js",
+    "dev": "concurrently -n cluster,layout,proxy,search,product \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:dev\" \"npm run product:dev\"",
+    "start": "concurrently -n cluster,layout,proxy,search,product \"npm run cluster\" \"npm run layout\" \"npm run proxy\" \"npm run search:prod\" \"npm run product:prod\""
   },
   "repository": {
     "type": "git",
