@@ -4,5 +4,8 @@
   },
   "Product": {
     "server": "http://localhost:3001/batch"
+  },
+  "Example": {
+    "server": "http://localhost:3002/batch"
   }
 }

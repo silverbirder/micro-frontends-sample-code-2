@@ -29,7 +29,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-  title: PropTypes.object.isRequired
+  title: PropTypes.string.isRequired
 };
 
 export default Search;
